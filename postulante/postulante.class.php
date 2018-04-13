@@ -7,8 +7,7 @@ class postulante{
         $this->bd = new bd();
     }
 
-    public function save($info){
-        
+    public function save($info){        
         $this->saveDatosPersonales($info);        
         if($info['expLab']=="S"){
             $this->saveExperienciaLaboral($info);
@@ -55,14 +54,16 @@ class postulante{
     }
     public function saveIdioma($info){
         $lastID = $this->getLastId();
-        
-        $queryInsertIDIOMA = "INSERT INTO `gobiernoCABA`.`idioma` (`idNombreIdioma`, `oral`, `escrito`, `idPostulante`) 
-                              VALUES ('".$info['nIdioma']."', '".$info['pOral']."', '".$info['pEscrito']."', ".$lastID.")";
-        if($this->bd->ejecutarNonQuery($queryInsertIDIOMA)){
-            echo "OK";
-        }else{
-            echo "ERROR";
-        }
+        $iteraciones = $info['itIDIOMAS'] +1;        
+        for ($i=0; $i < $iteraciones ; $i++) { 
+            $queryInsertIDIOMA = "INSERT INTO `gobiernoCABA`.`idioma` (`idNombreIdioma`, `oral`, `escrito`, `idPostulante`) 
+                              VALUES ('".$info['nIdioma'.$i]."', '".$info['pOral'.$i]."', '".$info['pEscrito'.$i]."', ".$lastID.")";
+            if($this->bd->ejecutarNonQuery($queryInsertIDIOMA)){
+                echo "OK";
+            }else{
+                echo "ERROR";
+            }
+        }                       
     }
     public function delete($idPostulante){
         $queryDeletePostulante = "DELETE FROM `gobiernoCABA`.`postulante` WHERE `idPostulante`='".$idPostulante."'";

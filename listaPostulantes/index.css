@@ -13,7 +13,13 @@ table{
 h5{
     margin-top:1em;
 }
+h5:first-child{
+    margin-top:0em;
+}
 .modal-body > #contenido{
     height: 50vh;
     overflow-y: scroll;
+}
+li{
+    list-style-type: disc;
 }

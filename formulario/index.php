@@ -221,21 +221,27 @@
                                 <input type="date" name="fHastaEst" id="fHastaEst" class="form-control" required    >
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <p><span class="subTit">Idioma</span> Si <input type="radio" name="idiom" id="idiSi" class="radioID" value="S"> No <input type="radio" name="idiom" id="idiNo" class="radioID" value="N"></p>
+                        <div class="col-lg-11">
+                            <p><span class="subTit">Idioma</span> Si <input type="radio" name="idiom" id="idiSi" class="radioID" value="S">
+                                                                  No <input type="radio" name="idiom" id="idiNo" class="radioID" value="N" checked></p>
                         </div>
+                        <!--IDIOMAS-->
+                        <div class="col-lg-1">
+                            <input type="button" class="btn btn-success" id="addIdioma" value="Agregar Idioma">
+                        </div>
+                        <div class="iteracion" data-it="0"></div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="nIdioma">Nombre:</label>                                
-                                <select name="nIdioma" id="nIdioma" class="iI form-control" disabled>
+                                <label for="nIdioma0">Nombre:</label>                                
+                                <select name="nIdioma0" id="nIdioma0" class="iI form-control" disabled>
                                 
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pOral">Oral:</label>                                
-                                <select name="pOral" id="pOral" class="iI form-control" disabled>
+                                <label for="pOral0">Oral:</label>                                
+                                <select name="pOral0" id="pOral0" class="iI form-control" disabled>
                                     <option value="0" selected>Seleccione una opción</option>
                                     <option value="Bajo">Bajo</option>
                                     <option value="Intermedio">Intermedio</option>
@@ -245,15 +251,19 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pEscrito">Escrito:</label>                                
-                                <select name="pEscrito" id="pEscrito" class="iI form-control" disabled>
+                                <label for="pEscrito0">Escrito:</label>                                
+                                <select name="pEscrito0" id="pEscrito0" class="iI form-control" disabled>
                                     <option value="0" selected>Seleccione una opción</option>
                                     <option value="Bajo">Bajo</option>
                                     <option value="Intermedio">Intermedio</option>
                                     <option value="Avanzado">Avanzado</option>
                                 </select>
                             </div>
-                        </div>                        
+                        </div>
+                        <div class="col-lg-6"></div>
+                        <div class="col-lg-12" id="idiomas">
+                            <input type="hidden" id="itIDIOMAS" name="itIDIOMAS" value="">
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-2">

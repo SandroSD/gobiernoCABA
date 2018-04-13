@@ -46,7 +46,7 @@
       <div class="modal-body">
         <div id="contenido">
           <?php
-              echo "<h5>Datos Personales:</h5>";
+              echo "<h5>Datos Personales</h5>";
               echo "<span class='acomodo'> Nombre: </span> ". $row['nombre']."<br>";
               echo "<span class='acomodo'> Apellido: </span> ". $row['apellido']."<br>";
               echo "<span class='acomodo'> Sexo: </span> ". $row['sexo']."<br>";
@@ -60,15 +60,19 @@
               echo "<span class='acomodo'> Calle: </span> ". $row['calle']."<br>";
               echo "<span class='acomodo'> Metas: </span> ". $row['metas']."<br>";
             }
-            echo "<h5>Idiomas:</h5>";
+            echo "<h5>Idiomas</h5>";
             if(is_null($infoIdioma)){
               echo "<span class='acomodo'>El postulante no posee conocimientos sobre otro idioma.</span>";          
             }else{
-              foreach ($infoIdioma as $row){                      
-                echo "<span class='acomodo'> Nombre: </span> ". $row['nombreIdioma']."<br>";
+              echo "<ul>";
+              foreach ($infoIdioma as $row){
+                                     
+                echo "<li><span class='acomodo'> Nombre: </span> ". $row['nombreIdioma']."<br></li>";
                 echo "<span class='acomodo'> Oral: </span> ". $row['oral']."<br>";
                 echo "<span class='acomodo'> Escrito: </span> ". $row['escrito']."<br>";
-              }        
+                
+              } 
+              echo "</ul>";       
             }
             echo "<h5>Experiencia Laboral</h5>";
             if(is_null($infoExpLaboral)){
@@ -88,7 +92,7 @@
                 echo "<span class='acomodo'> Personas de Referencia: </span> ". $row['pReferencia']."<br>";
               }        
             }
-            echo "<h5>Estudio:</h5>";                                    
+            echo "<h5>Estudio</h5>";                                    
               foreach ($infoEstudio as $row){                      
                 echo "<span class='acomodo'> Casa de Estudio: </span> ". $row['casaEstudios']."<br>";
                 echo "<span class='acomodo'> Nivel: </span> ". $row['nivel']."<br>";

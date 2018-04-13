@@ -2,7 +2,7 @@ $(document).ready(function(){
     cargarEstadosCiviles();
     cargarPaises();
     cargarProvincia();
-    cargarIdiomas();
+    cargarIdiomas(0);
 
     $("#menuPpal").click(function(){
         location.href="../index.php";
@@ -35,9 +35,6 @@ $(document).ready(function(){
         }
     });
 
-
-    
-
     $("#submitPersona").click(function(e){
         e.preventDefault();
         var form = $("#submitForm").serialize();
@@ -53,9 +50,58 @@ $(document).ready(function(){
                 location.href="../index.php";
             }
         });
+    });  
+    
+    $("#addIdioma").click(function(){
+        $(".deleteIdioma").unbind();
+        var i = $(".iteracion").last().data('it')+1;
 
+        var contenido = '<div class="row iteracion" data-it="'+i+'"><div class="col-lg-6">'+
+                            '<div class="form-group">'+
+                                '<label for="nIdioma'+i+'">Nombre:</label>'+
+                                '<select name="nIdioma'+i+'" id="nIdioma'+i+'" class="iI form-control" disabled>'+            
+                                '</select>'+
+                            '</div>'+
+                        '</div>'+
+                        '<div class="col-lg-6">'+
+                            '<div class="form-group">'+
+                                '<label for="pOral'+i+'">Oral:</label>'+
+                                '<select name="pOral'+i+'" id="pOral'+i+'" class="iI form-control" disabled>'+
+                                    '<option value="0" selected>Seleccione una opción</option>'+
+                                    '<option value="Bajo">Bajo</option>'+
+                                    '<option value="Intermedio">Intermedio</option>'+
+                                    '<option value="Avanzado">Avanzado</option>'+
+                                '</select>'+
+                            '</div>'+
+                        '</div>'+
+                        '<div class="col-lg-6">'+
+                            '<div class="form-group">'+
+                                '<label for="pEscrito'+i+'">Escrito:</label>'+
+                                '<select name="pEscrito'+i+'" id="pEscrito'+i+'" class="iI form-control" disabled>'+
+                                '<option value="0" selected>Seleccione una opción</option>'+
+                                '<option value="Bajo">Bajo</option>'+
+                                '<option value="Intermedio">Intermedio</option>'+
+                                '<option value="Avanzado">Avanzado</option>'+
+                                '</select>'+
+                            '</div>'+
+                        '</div>'+
+                        '<div class="col-lg-1 offset-lg-5">'+
+                            '<div class="form-group">'+
+                                '<label for=""></label>'+
+                                '<input type="button" class="btn btn-danger deleteIdioma" value="Borrar Idioma">'+
+                            '</div>'+
+                        '</div></div>';
+        $("#idiomas").append(contenido);
+        cargarIdiomas(i);
+        $("#itIDIOMAS").val(i);
+        i++;
+        
+        $(".deleteIdioma").click(function(){
+            var miBloque = $(this).parent().parent().parent();
+            miBloque.remove();            
+        });
+    });
 
-    });    
 });
 
 function cargarEstadosCiviles(){
@@ -95,14 +141,14 @@ function cargarProvincia(){
         });
     });
 }
-function cargarIdiomas(){    
+function cargarIdiomas(numero){    
     $.ajax({
         url : 'switch.php?op=cargarIdiomas',
         data : {},
         type : 'POST',
         dataType : 'text',      
         success : function(data){         
-            $("#nIdioma").html(data);
+            $("#nIdioma"+numero).html(data);
         }
     });    
 }
