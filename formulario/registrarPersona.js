@@ -47,8 +47,10 @@ $(document).ready(function(){
             data : {form: form},
             type : 'POST',
             dataType : 'html',      
-            success : function(data){         
-                
+            success : function(data){    
+                alert("Postulante Registrado Correctamente");     
+                $("#submitForm")[0].reset();
+                location.href="../index.php";
             }
         });
 

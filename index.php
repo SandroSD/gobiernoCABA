@@ -22,10 +22,19 @@
             <div class="row">                
                 <div class="col-lg-6 offset-lg-2 mt-5">
                     <div id="contIndex">         
-                        <h1>Gobierno de la Ciudad Autónoma de Buenos Aires</h1>
-                        <h3>Veni y trabaja con nosotros.</h3>
-                        <button id="regPersona" class="btn btn-primary">Registrar Postulante</button>
-                        <button id="mosPersona" class="btn btn-info">Mostrar Postulantes Registrados</button>
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <h1>Gobierno de la Ciudad Autónoma de Buenos Aires</h1>
+                                <h3>Veni y trabaja con nosotros.</h3>
+                            </div>
+                            <div class="col-lg-2">
+                                <img src="img/escudo.png" id="escudo">
+                            </div>
+                            <div class="col-lg-12">                                
+                                <button id="regPersona" class="btn btn-primary">Registrar Postulante</button>
+                                <button id="mosPersona" class="btn btn-info">Mostrar Postulantes Registrados</button>
+                            </div>                            
+                        </div>                        
                     </div>
                 </div>                
             </div>

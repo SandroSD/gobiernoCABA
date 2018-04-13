@@ -46,7 +46,7 @@
                                 <label for="sexo" class="form-check-label acomodo">
                                     Masculino
                                 </label><br>                
-                                <input type="radio" name="sexo" id="" value="f" class="acomodo">
+                                <input type="radio" name="sexo" id="" value="f" class="acomodo" checked>
                                 <label for="sexo" class="form-check-label acomodo">
                                     Femenino
                                 </label>
@@ -120,72 +120,72 @@
                             </div>                    
                         </div>
                         <div class="col-lg-12">
-                            <p><span class="subTit">Experiencia Laboral</span> Si <input type="radio" name="expLab" id="expSi" class="radioEL" value="S"> No <input type="radio" name="expLab" id="expNo" class="radioEL" value="N"></p>
+                            <p><span class="subTit">Experiencia Laboral</span> Si <input type="radio" name="expLab" id="expSi" class="radioEL" value="S"> No <input type="radio" name="expLab" id="expNo" class="radioEL" value="N" checked></p>
                         </div>                
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="empresa">Empresa:</label>
-                                <input type="text" name="empresa" id="empresa" class="iEL form-control">
+                                <input type="text" name="empresa" id="empresa" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="actividad">Actividad:</label>
-                                <input type="text" name="actividad" id="actividad" class="iEL form-control">
+                                <input type="text" name="actividad" id="actividad" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="puesto">Puesto:</label>
-                                <input type="text" name="puesto" id="puesto" class="iEL form-control">
+                                <input type="text" name="puesto" id="puesto" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="nivel">Nivel:</label>
-                                <input type="text" name="nivel" id="nivel" class="iEL form-control">
+                                <input type="text" name="nivel" id="nivel" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="pais">País:</label>
-                                <input type="text" name="pais" id="pais" class="iEL form-control">
+                                <input type="text" name="pais" id="pais" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="fDesde">Fecha Desde:</label>
-                                <input type="date" name="fDesde" id="fDesde" class="iEL form-control">
+                                <input type="date" name="fDesde" id="fDesde" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="fHasta">Fecha Hasta:</label>
-                                <input type="date" name="fHasta" id="fHasta" class="iEL form-control">
+                                <input type="date" name="fHasta" id="fHasta" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="aPuesto">Area del Puesto:</label>
-                                <input type="text" name="aPuesto" id="aPuesto" class="iEL form-control">
+                                <input type="text" name="aPuesto" id="aPuesto" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="descripcion">Descripción:</label>
-                                <textarea name="descripcion" id="descripcion" cols="15" rows="10" class="iEL form-control"></textarea>
+                                <textarea name="descripcion" id="descripcion" cols="15" rows="10" class="iEL form-control" disabled></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="pCargo">Personas a Cargo:</label>
-                                <input type="text" name="pCargo" id="pCargo" class="iEL form-control">
+                                <input type="text" name="pCargo" id="pCargo" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="pReferencia">Persona de Referencia:</label>
-                                <input type="text" name="pReferencia" id="pReferencia" class="iEL form-control">
+                                <input type="text" name="pReferencia" id="pReferencia" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -226,18 +226,16 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="nIdioma">Nombre:</label>
-                                <!--input type="text" name="nIdioma" id="nIdioma" class="iI form-control"-->
-                                <select name="nIdioma" id="nIdioma" class="iI form-control">
+                                <label for="nIdioma">Nombre:</label>                                
+                                <select name="nIdioma" id="nIdioma" class="iI form-control" disabled>
                                 
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pOral">Oral:</label>
-                                <!--input type="text" name="pOral" id="pOral" class="iI form-control"-->
-                                <select name="pOral" id="pOral" class="iI form-control">
+                                <label for="pOral">Oral:</label>                                
+                                <select name="pOral" id="pOral" class="iI form-control" disabled>
                                     <option value="0" selected>Seleccione una opción</option>
                                     <option value="Bajo">Bajo</option>
                                     <option value="Intermedio">Intermedio</option>
@@ -247,16 +245,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pEscrito">Escrito:</label>
-                                <!--input type="text" name="pEscrito" id="pEscrito" class="iI form-control"-->
-                                <select name="pEscrito" id="pEscrito" class="iI form-control">
+                                <label for="pEscrito">Escrito:</label>                                
+                                <select name="pEscrito" id="pEscrito" class="iI form-control" disabled>
                                     <option value="0" selected>Seleccione una opción</option>
                                     <option value="Bajo">Bajo</option>
                                     <option value="Intermedio">Intermedio</option>
                                     <option value="Avanzado">Avanzado</option>
                                 </select>
                             </div>
-                        </div>                                                
+                        </div>                        
                     </div>
                     <div class="row">
                         <div class="col-lg-2">
