@@ -93,9 +93,16 @@ $(document).ready(function(){
                         '</div></div>';
         $("#idiomas").append(contenido);
         cargarIdiomas(i);
-        $("#itIDIOMAS").val(i);
-        i++;
+        $("#itIDIOMAS").val(i); //guardo cantidad de iteraciones en un hidden para usar en el back.
         
+        var opcionIdioma = $('input[name=idiom]:checked').val();
+        var items = $(".iI");
+        if(opcionIdioma=="S"){
+            items.removeAttr('disabled');
+            items.prop('required',true);
+        }
+
+        i++;        
         $(".deleteIdioma").click(function(){
             var miBloque = $(this).parent().parent().parent();
             miBloque.remove();            
