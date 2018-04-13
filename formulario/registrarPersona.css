@@ -1,0 +1,10 @@
+textarea{
+    resize: none;
+}
+#contenido{
+    margin:10px;
+}
+
+.subTit{
+    font-size: 30px;
+}

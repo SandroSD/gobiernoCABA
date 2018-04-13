@@ -1,0 +1,19 @@
+#contenido{
+    margin:1em;
+}
+table{
+    margin-top:1em;
+    text-align: center;
+}
+.acomodo{
+    margin-left:2em;
+    font-weight: bold;
+    
+}
+h5{
+    margin-top:1em;
+}
+.modal-body > #contenido{
+    height: 50vh;
+    overflow-y: scroll;
+}
