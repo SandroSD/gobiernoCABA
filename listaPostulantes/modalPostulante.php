@@ -61,7 +61,7 @@
               echo "<span class='acomodo'> Metas: </span> ". $row['metas']."<br>";
             }
             echo "<h5><i class='fas fa-angle-right'></i> Idiomas</h5>";
-            if(count($infoIdioma)){
+            if(count($infoIdioma)==0){
               echo "<span class='acomodo'>El postulante no posee conocimientos sobre otro idioma.</span>";          
             }else{              
               foreach ($infoIdioma as $row){                                     
@@ -71,7 +71,7 @@
               }               
             }
             echo "<h5><i class='fas fa-angle-right'></i> Experiencia Laboral</h5>";
-            if(count($infoExpLaboral)){
+            if(count($infoExpLaboral)==0){
               echo "<span class='acomodo'>El postulante no posee experiencia laboral.</span>";          
             }else{
               foreach ($infoExpLaboral as $row){                      
