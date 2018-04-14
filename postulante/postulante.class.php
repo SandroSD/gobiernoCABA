@@ -7,7 +7,8 @@ class postulante{
         $this->bd = new bd();
     }
 
-    public function save($info){        
+    public function save($info){
+             
         $this->saveDatosPersonales($info);        
         if($info['expLab']=="S"){
             $this->saveExperienciaLaboral($info);
@@ -31,14 +32,16 @@ class postulante{
     }
     public function saveExperienciaLaboral($info){
         $lastID = $this->getLastId();
-
-        $queryInsertEL = "INSERT INTO `gobiernoCABA`.`expLaboral` (`empresa`, `actividad`, `puesto`, `nivel`, `pais`, `fecDesde`, `fecHasta`, `area`, `descripcion`, `pCargo`, `pReferencia`, `idPostulante`)
-                          VALUES ('".$info['empresa']."', '".$info['actividad']."', '".$info['puesto']."', '".$info['nivel']."', '".$info['pais']."', '".$info['fDesde']."', '".$info['fHasta']."', '".$info['aPuesto']."', '".$info['descripcion']."', '".$info['pCargo']."', '".$info['pReferencia']."', ".$lastID.")";
-        if($this->bd->ejecutarNonQuery($queryInsertEL)){
-            echo "OK";
-        }else{
-            echo "ERROR";
-        }
+        $iteraciones = $info['itEXPERIENCIAS']+1;
+        for ($i=0; $i < $iteraciones ; $i++) { 
+            $queryInsertEL = "INSERT INTO `gobiernoCABA`.`expLaboral` (`empresa`, `actividad`, `puesto`, `nivel`, `pais`, `fecDesde`, `fecHasta`, `area`, `descripcion`, `pCargo`, `pReferencia`, `idPostulante`)
+                              VALUES ('".$info['empresa'.$i]."', '".$info['actividad'.$i]."', '".$info['puesto'.$i]."', '".$info['nivel'.$i]."', '".$info['pais'.$i]."', '".$info['fDesde'.$i]."', '".$info['fHasta'.$i]."', '".$info['aPuesto'.$i]."', '".$info['descripcion'.$i]."', '".$info['pCargo'.$i]."', '".$info['pReferencia'.$i]."', ".$lastID.")";
+            if($this->bd->ejecutarNonQuery($queryInsertEL)){
+                echo "OK";
+            }else{
+                echo "ERROR";
+            }   
+        }        
     }
     public function saveEstudios($info){        
         $lastID = $this->getLastId();

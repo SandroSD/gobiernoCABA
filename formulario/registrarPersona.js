@@ -9,10 +9,8 @@ $(document).ready(function(){
     });
 
     $(".radioEL").change(function(){
-        var dato = $('input[name=expLab]:checked').val();
-        console.log(dato);
+        var dato = $('input[name=expLab]:checked').val();        
         var items = $(".iEL");
-        console.log(items);
         if(dato == "S"){
             items.removeAttr('disabled');
             items.prop('required',true);
@@ -23,9 +21,9 @@ $(document).ready(function(){
     });
     $(".radioID").change(function(){
         var dato = $('input[name=idiom]:checked').val();
-        console.log(dato);
+        
         var items = $(".iI");
-        console.log(items);
+        
         if(dato == "S"){
             items.removeAttr('disabled');
             items.prop('required',true);
@@ -45,9 +43,9 @@ $(document).ready(function(){
             type : 'POST',
             dataType : 'html',      
             success : function(data){    
-                alert("Postulante Registrado Correctamente");     
+                /*alert("Postulante Registrado Correctamente");     
                 $("#submitForm")[0].reset();
-                location.href="../index.php";
+                location.href="../index.php";*/
             }
         });
     });  
@@ -109,6 +107,100 @@ $(document).ready(function(){
             miBloque.remove();            
         });
     });
+    $("#addExpLab").click(function(){
+        $(".deleteExperiencia").unbind();
+        var i = $(".iteracionn").last().data('it')+1;
+        
+        var contenido = '<div class="row iteracionn" data-it="'+i+'">'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="empresa'+i+'">Empresa:</label>'+
+                                    '<input type="text" name="empresa'+i+'" id="empresa'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="actividad'+i+'">Actividad:</label>'+
+                                    '<input type="text" name="actividad'+i+'" id="actividad'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="puesto'+i+'">Puesto:</label>'+
+                                    '<input type="text" name="puesto'+i+'" id="puesto'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="nivel'+i+'">Nivel:</label>'+
+                                    '<input type="text" name="nivel'+i+'" id="nivel'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="pais'+i+'">País:</label>'+
+                                    '<input type="text" name="pais'+i+'" id="pais'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="fDesde'+i+'">Fecha Desde:</label>'+
+                                    '<input type="date" name="fDesde'+i+'" id="fDesde'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="fHasta'+i+'">Fecha Hasta:</label>'+
+                                    '<input type="date" name="fHasta'+i+'" id="fHasta'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="aPuesto'+i+'">Area del Puesto:</label>'+
+                                    '<input type="text" name="aPuesto'+i+'" id="aPuesto'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="descripcion'+i+'">Descripción:</label>'+
+                                    '<textarea name="descripcion'+i+'" id="descripcion'+i+'" cols="15" rows="10" class="iEL form-control" disabled></textarea>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="pCargo'+i+'">Personas a Cargo:</label>'+
+                                    '<input type="text" name="pCargo'+i+'" id="pCargo'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-6">'+
+                                '<div class="form-group">'+
+                                    '<label for="pReferencia'+i+'">Persona de Referencia:</label>'+
+                                    '<input type="text" name="pReferencia'+i+'" id="pReferencia'+i+'" class="iEL form-control" disabled>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="col-lg-1 offset-lg-5">'+
+                                '<div class="form-group">'+
+                                    '<label for=""></label>'+                                    
+                                    '<button type="button" class="btn btn-danger deleteExperiencia"><i class="far fa-trash-alt"></i></button>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>';
+        $("#experiencias").append(contenido);
+        $("#itEXPERIENCIAS").val(i);
+
+        var opcionExperiencia = $('input[name=expLab]:checked').val();
+        var items = $(".iEL");
+        if(opcionExperiencia=="S"){
+            items.removeAttr('disabled');
+            items.prop('required',true);
+        }
+
+        i++;
+        $(".deleteExperiencia").click(function(){
+            var miBloque = $(this).parent().parent().parent();
+            miBloque.remove();            
+        });
+    });
 
 });
 
@@ -136,8 +228,7 @@ function cargarPaises(){
 }
 function cargarProvincia(){
     $("#paisDP").change(function(){
-        var idPais = $("#paisDP").val();
-        console.log(idPais);
+        var idPais = $("#paisDP").val();        
         $.ajax({
             url : 'switch.php?op=cargarProv',
             data : {idPais: idPais},

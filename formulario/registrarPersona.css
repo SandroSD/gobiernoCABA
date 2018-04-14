@@ -7,14 +7,12 @@ textarea{
 .subTit{
     font-size: 30px;    
 }
-.deleteIdioma{
+.deleteIdioma, .deleteExperiencia{
     margin-top:2.2em;
-}
-#addIdioma{
-    margin-left:1.7em;
-}
-.deleteIdioma{
     margin-left:5.6em;
+}
+#addIdioma, #addExpLab{
+    margin-left:1.7em;
 }
 #submitPersona{
     margin-left:2.4em;

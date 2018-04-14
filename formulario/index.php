@@ -13,8 +13,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="registrarPersona.css">
+    
 
+    <link rel="stylesheet" href="registrarPersona.css">
+    
 </head>
 <body>
     <div id="contenido">
@@ -119,76 +121,87 @@
                                 <label for="metas">Metas a Cumplir:</label>
                                 <textarea name="metas" id="metas" cols="30" rows="10" class="form-control" required></textarea>
                             </div>                    
-                        </div>                        
-                        <div class="col-lg-12">
-                            <p><span class="subTit">Experiencia Laboral</span> Si <input type="radio" name="expLab" id="expSi" class="radioEL" value="S"> No <input type="radio" name="expLab" id="expNo" class="radioEL" value="N" checked></p>
-                        </div>                
+                        </div>
+                        <!--EXPERIENCIA LABORAL-->         
+                        <div class="col-lg-11">
+                            <span class="subTit">Experiencia Laboral</span>
+                        </div>
+                        <div class="col-lg-1">
+                            Si <input type="radio" name="expLab" id="expSi" class="radioEL" value="S">
+                            No <input type="radio" name="expLab" id="expNo" class="radioEL" value="N" checked>
+                            <button type="button" class="btn btn-success" id="addExpLab"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="iteracionn" data-it="0"></div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="empresa">Empresa:</label>
-                                <input type="text" name="empresa" id="empresa" class="iEL form-control" disabled>
+                                <label for="empresa0">Empresa:</label>
+                                <input type="text" name="empresa0" id="empresa0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="actividad">Actividad:</label>
-                                <input type="text" name="actividad" id="actividad" class="iEL form-control" disabled>
+                                <label for="actividad0">Actividad:</label>
+                                <input type="text" name="actividad0" id="actividad0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="puesto">Puesto:</label>
-                                <input type="text" name="puesto" id="puesto" class="iEL form-control" disabled>
+                                <label for="puesto0">Puesto:</label>
+                                <input type="text" name="puesto0" id="puesto0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="nivel">Nivel:</label>
-                                <input type="text" name="nivel" id="nivel" class="iEL form-control" disabled>
+                                <label for="nivel0">Nivel:</label>
+                                <input type="text" name="nivel0" id="nivel0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pais">País:</label>
-                                <input type="text" name="pais" id="pais" class="iEL form-control" disabled>
+                                <label for="pais0">País:</label>
+                                <input type="text" name="pais0" id="pais0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="fDesde">Fecha Desde:</label>
-                                <input type="date" name="fDesde" id="fDesde" class="iEL form-control" disabled>
+                                <label for="fDesde0">Fecha Desde:</label>
+                                <input type="date" name="fDesde0" id="fDesde0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="fHasta">Fecha Hasta:</label>
-                                <input type="date" name="fHasta" id="fHasta" class="iEL form-control" disabled>
+                                <label for="fHasta0">Fecha Hasta:</label>
+                                <input type="date" name="fHasta0" id="fHasta0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="aPuesto">Area del Puesto:</label>
-                                <input type="text" name="aPuesto" id="aPuesto" class="iEL form-control" disabled>
+                                <label for="aPuesto0">Area del Puesto:</label>
+                                <input type="text" name="aPuesto0" id="aPuesto0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="descripcion">Descripción:</label>
-                                <textarea name="descripcion" id="descripcion" cols="15" rows="10" class="iEL form-control" disabled></textarea>
+                                <label for="descripcion0">Descripción:</label>
+                                <textarea name="descripcion0" id="descripcion0" cols="15" rows="10" class="iEL form-control" disabled></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pCargo">Personas a Cargo:</label>
-                                <input type="text" name="pCargo" id="pCargo" class="iEL form-control" disabled>
+                                <label for="pCargo0">Personas a Cargo:</label>
+                                <input type="text" name="pCargo0" id="pCargo0" class="iEL form-control" disabled>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="pReferencia">Persona de Referencia:</label>
-                                <input type="text" name="pReferencia" id="pReferencia" class="iEL form-control" disabled>
+                                <label for="pReferencia0">Persona de Referencia:</label>
+                                <input type="text" name="pReferencia0" id="pReferencia0" class="iEL form-control" disabled>
                             </div>
                         </div>
+                        <div class="col-lg-12" id="experiencias">
+                            <input type="hidden" name="itEXPERIENCIAS" id="itEXPERIENCIAS" value="">
+                        </div>
+                        <!--ESTUDIOS-->
                         <div class="col-lg-12">
                             <h2>Estudios</h2>                    
                         </div>

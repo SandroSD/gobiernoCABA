@@ -76,16 +76,16 @@
             }else{
               foreach ($infoExpLaboral as $row){                      
                 echo "<span class='acomodo'> Empresa: </span> ". $row['empresa']."<br>";
-                echo "<span class='acomodo'> Actividad: </span> ". $row['actividad']."<br>";
-                echo "<span class='acomodo'> Puesto: </span> ". $row['puesto']."<br>";
-                echo "<span class='acomodo'> Nivel: </span> ". $row['nivel']."<br>";
-                echo "<span class='acomodo'> País: </span> ". $row['pais']."<br>";
-                echo "<span class='acomodo'> Fecha Inicio: </span> ". $row['fecDesde']."<br>";
-                echo "<span class='acomodo'> Fecha Fin: </span> ". $row['fecHasta']."<br>";
-                echo "<span class='acomodo'> Area: </span> ". $row['area']."<br>";
-                echo "<span class='acomodo'> Descripción: </span> ". $row['descripcion']."<br>";
-                echo "<span class='acomodo'> Personas a Cargo: </span> ". $row['pCargo']."<br>";
-                echo "<span class='acomodo'> Personas de Referencia: </span> ". $row['pReferencia']."<br>";
+                echo "<span class='acomodo subitem'> Actividad: </span> ". $row['actividad']."<br>";
+                echo "<span class='acomodo subitem'> Puesto: </span> ". $row['puesto']."<br>";
+                echo "<span class='acomodo subitem'> Nivel: </span> ". $row['nivel']."<br>";
+                echo "<span class='acomodo subitem'> País: </span> ". $row['pais']."<br>";
+                echo "<span class='acomodo subitem'> Fecha Inicio: </span> ". $row['fecDesde']."<br>";
+                echo "<span class='acomodo subitem'> Fecha Fin: </span> ". $row['fecHasta']."<br>";
+                echo "<span class='acomodo subitem'> Area: </span> ". $row['area']."<br>";
+                echo "<span class='acomodo subitem'> Descripción: </span> ". $row['descripcion']."<br>";
+                echo "<span class='acomodo subitem'> Personas a Cargo: </span> ". $row['pCargo']."<br>";
+                echo "<span class='acomodo subitem'> Personas de Referencia: </span> ". $row['pReferencia']."<br>";
               }        
             }
             echo "<h5><i class='fas fa-angle-right'></i> Estudio</h5>";                                    
