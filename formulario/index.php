@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="registrarPersona.css">
 
@@ -40,8 +41,8 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="form-check">
-                                <div>Sexo:</div>
+                            <label>Sexo:</label>
+                            <div class="form-check">                                
                                 <input type="radio" name="sexo" id="" value="m" class="acomodo">
                                 <label for="sexo" class="form-check-label acomodo">
                                     Masculino
@@ -118,7 +119,7 @@
                                 <label for="metas">Metas a Cumplir:</label>
                                 <textarea name="metas" id="metas" cols="30" rows="10" class="form-control" required></textarea>
                             </div>                    
-                        </div>
+                        </div>                        
                         <div class="col-lg-12">
                             <p><span class="subTit">Experiencia Laboral</span> Si <input type="radio" name="expLab" id="expSi" class="radioEL" value="S"> No <input type="radio" name="expLab" id="expNo" class="radioEL" value="N" checked></p>
                         </div>                
@@ -222,12 +223,18 @@
                             </div>
                         </div>
                         <div class="col-lg-11">
-                            <p><span class="subTit">Idioma</span> Si <input type="radio" name="idiom" id="idiSi" class="radioID" value="S">
-                                                                  No <input type="radio" name="idiom" id="idiNo" class="radioID" value="N" checked></p>
+                            <span class="subTit">Idioma</span>
+                            <div>                                
+                                
+                            </div>
                         </div>
+
                         <!--IDIOMAS-->
                         <div class="col-lg-1">
-                            <input type="button" class="btn btn-success" id="addIdioma" value="Agregar Idioma">
+                            <!--input type="button" class="btn btn-success" id="addIdioma" value="Agregar Idioma"-->
+                                Si <input type="radio" name="idiom" id="idiSi" class="radioID" value="S">
+                                No <input type="radio" name="idiom" id="idiNo" class="radioID" value="N" checked>
+                            <button type="button" class="btn btn-success" id="addIdioma"><i class="fas fa-plus"></i></button>
                         </div>
                         <div class="iteracion" data-it="0"></div>
                         <div class="col-lg-6">

@@ -88,7 +88,8 @@ $(document).ready(function(){
                         '<div class="col-lg-1 offset-lg-5">'+
                             '<div class="form-group">'+
                                 '<label for=""></label>'+
-                                '<input type="button" class="btn btn-danger deleteIdioma" value="Borrar Idioma">'+
+                                '<!--input type="button" class="btn btn-danger deleteIdioma" value="Borrar Idioma"-->'+
+                                '<button type="button" class="btn btn-danger deleteIdioma"><i class="far fa-trash-alt"></i></button>'+
                             '</div>'+
                         '</div></div>';
         $("#idiomas").append(contenido);

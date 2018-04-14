@@ -8,7 +8,6 @@ table{
 .acomodo{
     margin-left:2em;
     font-weight: bold;
-    
 }
 h5{
     margin-top:1em;
@@ -22,4 +21,7 @@ h5:first-child{
 }
 li{
     list-style-type: disc;
+}
+.subitem{
+    margin-left:3em;
 }

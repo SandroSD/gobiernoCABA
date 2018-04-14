@@ -4,10 +4,18 @@ textarea{
 #contenido{
     margin:10px;
 }
-
 .subTit{
-    font-size: 30px;
+    font-size: 30px;    
 }
 .deleteIdioma{
     margin-top:2.2em;
+}
+#addIdioma{
+    margin-left:1.7em;
+}
+.deleteIdioma{
+    margin-left:5.6em;
+}
+#submitPersona{
+    margin-left:2.4em;
 }

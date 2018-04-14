@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="formulario/registrarPersona.css">
@@ -31,8 +32,8 @@
                                 <img src="img/escudo.png" id="escudo">
                             </div>
                             <div class="col-lg-12">                                
-                                <button id="regPersona" class="btn btn-primary">Registrar Postulante</button>
-                                <button id="mosPersona" class="btn btn-info">Mostrar Postulantes Registrados</button>
+                                <button id="regPersona" class="btn btn-primary"><i class="fas fa-user-plus"></i> Registrar Postulante</button>
+                                <button id="mosPersona" class="btn btn-info"><i class="fas fa-list-ul"></i> Mostrar Postulantes Registrados</button>
                             </div>                            
                         </div>                        
                     </div>
