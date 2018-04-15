@@ -36,18 +36,29 @@ $(document).ready(function(){
     $("#submitPersona").click(function(e){
         e.preventDefault();
         var form = $("#submitForm").serialize();
-        console.log(form);
-        $.ajax({
-            url : 'switch.php?op=save',
-            data : {form: form},
-            type : 'POST',
-            dataType : 'html',      
-            success : function(data){    
-                /*alert("Postulante Registrado Correctamente");     
-                $("#submitForm")[0].reset();
-                location.href="../index.php";*/
+        var flag = 0;        
+        $("#submitForm").find('.checkForm').each(function() {
+            var elemento= this;
+            console.log("VALUE: "+elemento.value+" --- ID: "+elemento.id+" ---- DISABLED: "+$('#'+elemento.id).prop('disabled'));
+            if(elemento.value=="" && $('#'+elemento.id).prop('disabled')==false){
+                flag = 1;
             }
         });
+        if(flag == 1){
+            alert("Completar todos los campos antes de registrar al postulante");
+        }else{
+            $.ajax({
+                url : 'switch.php?op=save',
+                data : {form: form},
+                type : 'POST',
+                dataType : 'html',      
+                success : function(data){    
+                    alert("Postulante Registrado Correctamente");     
+                    $("#submitForm")[0].reset();
+                    location.href="../index.php";
+                }
+            });   
+        }                    
     });  
     
     $("#addIdioma").click(function(){
@@ -57,15 +68,15 @@ $(document).ready(function(){
         var contenido = '<div class="row iteracion" data-it="'+i+'"><div class="col-lg-6">'+
                             '<div class="form-group">'+
                                 '<label for="nIdioma'+i+'">Nombre:</label>'+
-                                '<select name="nIdioma'+i+'" id="nIdioma'+i+'" class="iI form-control" disabled>'+            
+                                '<select name="nIdioma'+i+'" id="nIdioma'+i+'" class="iI form-control checkForm" disabled>'+            
                                 '</select>'+
                             '</div>'+
                         '</div>'+
                         '<div class="col-lg-6">'+
                             '<div class="form-group">'+
                                 '<label for="pOral'+i+'">Oral:</label>'+
-                                '<select name="pOral'+i+'" id="pOral'+i+'" class="iI form-control" disabled>'+
-                                    '<option value="0" selected>Seleccione una opción</option>'+
+                                '<select name="pOral'+i+'" id="pOral'+i+'" class="iI form-control checkForm" disabled>'+
+                                    '<option value="" selected>Seleccione una opción</option>'+
                                     '<option value="Bajo">Bajo</option>'+
                                     '<option value="Intermedio">Intermedio</option>'+
                                     '<option value="Avanzado">Avanzado</option>'+
@@ -75,8 +86,8 @@ $(document).ready(function(){
                         '<div class="col-lg-6">'+
                             '<div class="form-group">'+
                                 '<label for="pEscrito'+i+'">Escrito:</label>'+
-                                '<select name="pEscrito'+i+'" id="pEscrito'+i+'" class="iI form-control" disabled>'+
-                                '<option value="0" selected>Seleccione una opción</option>'+
+                                '<select name="pEscrito'+i+'" id="pEscrito'+i+'" class="iI form-control checkForm" disabled>'+
+                                '<option value="" selected>Seleccione una opción</option>'+
                                 '<option value="Bajo">Bajo</option>'+
                                 '<option value="Intermedio">Intermedio</option>'+
                                 '<option value="Avanzado">Avanzado</option>'+
@@ -85,8 +96,7 @@ $(document).ready(function(){
                         '</div>'+
                         '<div class="col-lg-1 offset-lg-5">'+
                             '<div class="form-group">'+
-                                '<label for=""></label>'+
-                                '<!--input type="button" class="btn btn-danger deleteIdioma" value="Borrar Idioma"-->'+
+                                '<label for=""></label>'+                                
                                 '<button type="button" class="btn btn-danger deleteIdioma"><i class="far fa-trash-alt"></i></button>'+
                             '</div>'+
                         '</div></div>';
@@ -115,67 +125,67 @@ $(document).ready(function(){
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="empresa'+i+'">Empresa:</label>'+
-                                    '<input type="text" name="empresa'+i+'" id="empresa'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="empresa'+i+'" id="empresa'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="actividad'+i+'">Actividad:</label>'+
-                                    '<input type="text" name="actividad'+i+'" id="actividad'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="actividad'+i+'" id="actividad'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="puesto'+i+'">Puesto:</label>'+
-                                    '<input type="text" name="puesto'+i+'" id="puesto'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="puesto'+i+'" id="puesto'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="nivel'+i+'">Nivel:</label>'+
-                                    '<input type="text" name="nivel'+i+'" id="nivel'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="nivel'+i+'" id="nivel'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="pais'+i+'">País:</label>'+
-                                    '<input type="text" name="pais'+i+'" id="pais'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="pais'+i+'" id="pais'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="fDesde'+i+'">Fecha Desde:</label>'+
-                                    '<input type="date" name="fDesde'+i+'" id="fDesde'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="date" name="fDesde'+i+'" id="fDesde'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="fHasta'+i+'">Fecha Hasta:</label>'+
-                                    '<input type="date" name="fHasta'+i+'" id="fHasta'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="date" name="fHasta'+i+'" id="fHasta'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="aPuesto'+i+'">Area del Puesto:</label>'+
-                                    '<input type="text" name="aPuesto'+i+'" id="aPuesto'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="aPuesto'+i+'" id="aPuesto'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="descripcion'+i+'">Descripción:</label>'+
-                                    '<textarea name="descripcion'+i+'" id="descripcion'+i+'" cols="15" rows="10" class="iEL form-control" disabled></textarea>'+
+                                    '<textarea name="descripcion'+i+'" id="descripcion'+i+'" cols="15" rows="10" class="iEL form-control checkForm" disabled></textarea>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="pCargo'+i+'">Personas a Cargo:</label>'+
-                                    '<input type="text" name="pCargo'+i+'" id="pCargo'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="pCargo'+i+'" id="pCargo'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-6">'+
                                 '<div class="form-group">'+
                                     '<label for="pReferencia'+i+'">Persona de Referencia:</label>'+
-                                    '<input type="text" name="pReferencia'+i+'" id="pReferencia'+i+'" class="iEL form-control" disabled>'+
+                                    '<input type="text" name="pReferencia'+i+'" id="pReferencia'+i+'" class="iEL form-control checkForm" disabled>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="col-lg-1 offset-lg-5">'+

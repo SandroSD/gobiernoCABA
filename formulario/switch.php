@@ -9,7 +9,7 @@
         case 'estCiv':
             $queryEstadoCivil = "SELECT * from estadoCivil";
             $estados = $bd->ejecutarQuery($queryEstadoCivil);
-            $opciones = "<option value='0'>Elegir un estado</option>";
+            $opciones = "<option value=''>Elegir un estado</option>";
             foreach ($estados as $estado) {
                 $opciones .= "<option value='".$estado['idEstadoCivil']."'>".$estado['descripcion']."</option>";   
             }
@@ -18,7 +18,7 @@
         case 'cargarPais':
             $queryPais = "SELECT * from pais";
             $paises = $bd->ejecutarQuery($queryPais);
-            $opciones = "<option value='0'>Elegir un país</option>";
+            $opciones = "<option value=''>Elegir un país</option>";
             foreach ($paises as $pais) {
                 $opciones .= "<option value='".$pais['idPais']."'>".$pais['nombrePais']."</option>";   
             }
@@ -30,7 +30,7 @@
             };
             $queryProv = "SELECT * from estado where idPais ='".$idPais."'";
             $provincias = $bd->ejecutarQuery($queryProv);
-            $opciones = "<option value='0'>Elegir una provincia</option>";
+            $opciones = "<option value=''>Elegir una provincia</option>";
             foreach ($provincias as $provincia) {
                 $opciones .= "<option value='".$provincia['idEstado']."'>".$provincia['nombreEstado']."</option>";   
             }
@@ -39,7 +39,7 @@
         case 'cargarIdiomas':            
             $queryIdiomas = "SELECT * FROM listaIdiomas";
             $idiomas = $bd->ejecutarQuery($queryIdiomas);
-            $opciones = "<option value='0'>Elegir un idioma</option>";
+            $opciones = "<option value=''>Elegir un idioma</option>";
             foreach ($idiomas as $idioma) {
                 $opciones .= "<option value='".$idioma['idListaIdioma']."'>".$idioma['nombreIdioma']."</option>";   
             }
