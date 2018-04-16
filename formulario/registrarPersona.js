@@ -9,13 +9,18 @@ $(document).ready(function(){
     });
 
     $(".radioEL").change(function(){
-        var dato = $('input[name=expLab]:checked').val();        
+        var dato = $('input[name=expLab]:checked').val();  
+
         var items = $(".iEL");
+        var btn = $("#addExpLab");
+
         if(dato == "S"){
             items.removeAttr('disabled');
+            btn.removeAttr('disabled');
             items.prop('required',true);
         }else{
             items.attr('disabled','disabled');
+            btn.attr('disabled','disabled');
             items.prop('required',false);
         }        
     });
@@ -23,12 +28,15 @@ $(document).ready(function(){
         var dato = $('input[name=idiom]:checked').val();
         
         var items = $(".iI");
-        
+        var btn = $("#addIdioma");
+
         if(dato == "S"){
             items.removeAttr('disabled');
+            btn.removeAttr('disabled');
             items.prop('required',true);
         }else{
             items.attr('disabled','disabled');
+            btn.attr('disabled','disabled');
             items.prop('required',false);
         }
     });

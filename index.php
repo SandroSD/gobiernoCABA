@@ -26,7 +26,7 @@
                         <div class="row">
                             <div class="col-lg-10">
                                 <h1>Gobierno de la Ciudad Autónoma de Buenos Aires</h1>
-                                <h3>Veni y trabaja con nosotros.</h3>
+                                <h3>Trabaja con nosotros.</h3>
                             </div>
                             <div class="col-lg-2">
                                 <img src="img/escudo.png" id="escudo">

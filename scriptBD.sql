@@ -84,7 +84,7 @@ CREATE TABLE `estudio` (
   `fecHasta` date NOT NULL,
   `idPostulante` int(11) NOT NULL,
   PRIMARY KEY (`idEstudio`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `estudio` (
 
 LOCK TABLES `estudio` WRITE;
 /*!40000 ALTER TABLE `estudio` DISABLE KEYS */;
-INSERT INTO `estudio` VALUES (29,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',14),(30,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',15),(31,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',16),(34,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',19),(35,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',20),(36,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',21),(37,'Unlam','licenciatura','matemÃ¡tica','2000-03-03','2018-05-03',22),(38,'UNLaM','licenciatura','matemÃ¡tica','2000-03-03','2018-04-12',23),(39,'asffsa','asf','fas','2018-04-03','2018-04-14',26),(40,'asfsafsfa','asfsfafsa','fsasafsaf','2018-04-10','2018-04-14',27),(41,'asfsafsfa','asfsfafsa','fsasafsaf','2018-04-10','2018-04-14',27);
+INSERT INTO `estudio` VALUES (29,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',14),(30,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',15),(34,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',19),(35,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',20),(36,'asfafs','asfafs','asfsaf','2018-04-10','2018-04-06',21),(43,'qwrwrqwrq','sfasfasfa','sfafsafsa','2018-04-10','2018-04-21',29),(44,'asfsaf','fsafsa','asffsa','2018-04-11','2018-04-07',30),(45,'fasfsa','asffsa','asffsa','2018-04-03','2018-04-19',31),(47,'asfasfasf','fsafasafs','fsasafsfa','2018-04-17','2018-04-28',33),(48,'afsfas','asffas','asffasfas','2018-04-26','2018-04-22',34),(49,'wrqqwr','sfsfsf','saffsa','2018-04-17','2018-05-01',35),(50,'fsa','asf','fsa','2018-04-11','2018-04-19',36),(51,'UNLaM','Universitario','IngenierÃ­a InformÃ¡tica','2012-02-08','2018-04-15',37),(52,'fsafsafas','safsfa','safasffsa','2018-04-09','2018-04-21',38);
 /*!40000 ALTER TABLE `estudio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,7 +119,7 @@ CREATE TABLE `expLaboral` (
   `pReferencia` varchar(45) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `idPostulante` int(11) NOT NULL,
   PRIMARY KEY (`idExpLaboral`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +128,7 @@ CREATE TABLE `expLaboral` (
 
 LOCK TABLES `expLaboral` WRITE;
 /*!40000 ALTER TABLE `expLaboral` DISABLE KEYS */;
-INSERT INTO `expLaboral` VALUES (10,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',14),(11,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',15),(12,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',16),(14,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',19),(15,'north data','informatica','secretaria','top top','Argentina','2000-03-03','2018-03-03','ventas','compra venta de unidades','100','Sandrito',22),(16,'north data','comercio','secretaria','top top','Argentina','2018-05-03','2018-04-12','comercial','','2','Sandrito',23);
+INSERT INTO `expLaboral` VALUES (10,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',14),(11,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',15),(14,'qrwrw','qwrrqw','asfsfa','asffsa','afsfsa','2018-04-04','2018-04-21','','sfasaf','asffas','asffsa',19),(17,'qwe','qwe','qaz','wed','asd','2018-04-11','2018-04-21','qweq','asdsasad','sadsda','fsafas',29),(19,'Empresa 1','asfsaf','asfsaf','asffas','asfasfasf','2018-04-12','2018-04-21','asffas','sfaasfas','saffas','saffas',33),(20,'aaa','aaa','safafs','asfasf','asfasf','2018-04-06','2018-04-27','saff','afsfs','asffas','asf',34),(21,'afsafs','asffas','asffsa','fasasf','asffsa','2018-04-10','2018-04-20','asffsa','asfsaf','fasasf','asffsafsa',34),(22,'Empresa 1','qwew','wrqrwq','rwr','sfas','2018-04-12','2018-04-27','saf','safsfa','saf','asf',35),(23,'eeeee','ss','sfasfa','ttt','asffsa','2018-04-10','2018-04-20','qwrwrq','wsasra','asffsa','fsafsa',35),(24,'fas','afs','saf','afs','saf','2018-04-12','2018-04-26','asf','asf','asf','ssss',36),(25,'sjt','docencia','docente','sec','Arg','2012-03-15','2018-04-15','sec','asf','no','luis lopez',37),(26,'fsafsa','asffsa','fasfsa','fasfsa','fasfsa','2018-04-12','2018-04-28','rwrqw','qrwrwq','qrwrwq','eeee',38),(27,'aaaaaaaaaaaaaaaa','fassfafsa','saffsa','fasfsasfa','saffsa','2018-04-26','2018-04-29','afsfsafsa','saffsafas','safsfasfa','sfafsafsa',38);
 /*!40000 ALTER TABLE `expLaboral` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,7 +146,7 @@ CREATE TABLE `idioma` (
   `escrito` varchar(15) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `idPostulante` int(11) NOT NULL,
   PRIMARY KEY (`idIdioma`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +155,7 @@ CREATE TABLE `idioma` (
 
 LOCK TABLES `idioma` WRITE;
 /*!40000 ALTER TABLE `idioma` DISABLE KEYS */;
-INSERT INTO `idioma` VALUES (8,'4','Intermedio','Avanzado',15),(9,'4','Intermedio','Avanzado',16),(12,'0','0','0',25);
+INSERT INTO `idioma` VALUES (8,'4','Intermedio','Avanzado',15),(22,'3','Bajo','Intermedio',29),(23,'1','Avanzado','Intermedio',29),(24,'4','Intermedio','Avanzado',29),(25,'2','Avanzado','Bajo',29),(26,'2','Intermedio','Avanzado',30),(27,'4','Intermedio','Avanzado',30),(28,'1','Avanzado','Intermedio',31),(29,'','','',31),(30,'','','',31),(31,'2','Intermedio','Avanzado',31),(32,'5','Intermedio','Avanzado',31),(33,'','','',31),(39,'2','Avanzado','Bajo',33),(40,'4','Intermedio','Bajo',33),(41,'5','Bajo','Bajo',33),(42,'0','Intermedio','Intermedio',34),(43,'4','Intermedio','Avanzado',34),(44,'4','Bajo','Intermedio',35),(45,'1','Avanzado','Avanzado',35),(46,'4','Bajo','Intermedio',35),(47,'3','Avanzado','Intermedio',35),(48,'4','Bajo','Intermedio',36),(49,'','','',36),(50,'1','Intermedio','Avanzado',37),(51,'','','',37),(52,'1','Avanzado','Avanzado',38),(53,'3','Bajo','Bajo',38),(54,'5','Bajo','Intermedio',38);
 /*!40000 ALTER TABLE `idioma` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -223,13 +223,12 @@ CREATE TABLE `postulante` (
   `dni` varchar(25) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `celular` varchar(20) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `fijo` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `idPais` int(3) NOT NULL,
   `idEstado` int(3) NOT NULL,
   `ciudad` varchar(45) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `calle` varchar(45) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `metas` varchar(45) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`idPostulante`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,7 +237,7 @@ CREATE TABLE `postulante` (
 
 LOCK TABLES `postulante` WRITE;
 /*!40000 ALTER TABLE `postulante` DISABLE KEYS */;
-INSERT INTO `postulante` VALUES (16,'Sandro','Dezerio','Masculino',2,'asfsaf','asfasf','asffas',2,5,'Ramos MejÃ­a','wqrqwr','Ã±Ã±asfasf'),(22,'Mi Nombre','Mi Apellido','Femenino',5,'123456789','147852369','123456',2,7,'Alguna Ciudad','Alguna Calle','AlgÃºn tÃ­lde loco.'),(23,'lili','ya','Femenino',3,'123123123','123123123','123123',1,1,'Ramos Mejia','Serrano 814','todas'),(24,'sfaasf','safsfa','Masculino',3,'fsasfa','asf','sfa',1,2,'sfafsa','fasasf','fasfasfsafsaasfasf'),(25,'sfaasf','safsfa','Masculino',3,'fsasfa','asf','sfa',1,2,'sfafsa','fasasf','fasfasfsafsaasfasf'),(26,'sfaasf','safsfa','Masculino',3,'fsasfa','asf','sfa',1,2,'sfafsa','fasasf','fasfasfsafsaasfasf'),(27,'aaaa','ssafsfa','Femenino',3,'1224','124214','125251',2,8,'asffsa','asffsa','asffsafsafsafsa');
+INSERT INTO `postulante` VALUES (29,'hola','como','Masculino',1,'andas','123','456',7,'asd','qwe','tÃ­lde'),(30,'sandro','dezerio','Masculino',3,'saf','241','241',7,'wqwrq','sfasfa','asffas'),(31,'ewqwqe','qewewq','Femenino',3,'sfsfafsa','afssfa','fasfsa',11,'fasfsa','sfafsa','afsfasfsa'),(33,'Robertito','alala','Femenino',2,'qwr','afs','wqrwqr',2,'qrw','wqrasf','safsaffsa'),(34,'fsa','fsaas','Femenino',2,'asf','asf','fsa',12,'saf','saf','afsasfs'),(35,'Sandro','','Femenino',2,'123','147','124',15,'qwwqr','ffas','afsfas'),(36,'saf','afs','Femenino',2,'asf','asf','afs',3,'fsa','asf','sfa'),(37,'pablo','rati','Masculino',1,'37','15','46',1,'Cast','buf','qwerty'),(38,'Sandro','gdsgds','Femenino',2,'122','fr41','fsasaf',21,'fasfas','asffas','fsafsa');
 /*!40000 ALTER TABLE `postulante` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -251,4 +250,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-12 23:26:37
+-- Dump completed on 2018-04-15 22:01:37

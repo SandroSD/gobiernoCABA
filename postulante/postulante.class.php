@@ -21,8 +21,8 @@ class postulante{
     public function saveDatosPersonales($info){
         $sexo = $info['sexo'] == "m" ? "Masculino" : "Femenino";                
 
-        $queryInsertDatPer = "INSERT INTO `gobiernoCABA`.`postulante` (`nombre`, `apellido`, `sexo`, `idEstadoCivil`, `dni`, `celular`, `fijo`, `idPais`, `idEstado`, `ciudad`, `calle`, `metas`) 
-                              VALUES ('".$info['nombre']."', '".$info['apellido']."', '".$sexo."', ".$info['estadoCivil'].", '".$info['documento']."', '".$info['celular']."', '".$info['tfijo']."',".$info['paisDP'].",".$info['provincia'].", '".$info['ciudad']."', '".$info['calle']."', '".$info['metas']."')";                
+        $queryInsertDatPer = "INSERT INTO `gobiernoCABA`.`postulante` (`nombre`, `apellido`, `sexo`, `idEstadoCivil`, `dni`, `celular`, `fijo`, `idEstado`, `ciudad`, `calle`, `metas`) 
+                              VALUES ('".$info['nombre']."', '".$info['apellido']."', '".$sexo."', ".$info['estadoCivil'].", '".$info['documento']."', '".$info['celular']."', '".$info['tfijo']."',".$info['provincia'].", '".$info['ciudad']."', '".$info['calle']."', '".$info['metas']."')";                
         if($this->bd->ejecutarNonQuery($queryInsertDatPer)){
             echo "OK";
         }else{

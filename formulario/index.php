@@ -127,7 +127,7 @@
                         <div class="col-lg-1">
                             Si <input type="radio" name="expLab" id="expSi" class="radioEL" value="S">
                             No <input type="radio" name="expLab" id="expNo" class="radioEL" value="N" checked>
-                            <button type="button" class="btn btn-success" id="addExpLab"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-success" id="addExpLab" disabled><i class="fas fa-plus"></i></button>
                         </div>
                         <div class="iteracionn" data-it="0"></div>
                         <div class="col-lg-6">
@@ -242,10 +242,9 @@
 
                         <!--IDIOMAS-->
                         <div class="col-lg-1">
-                            <!--input type="button" class="btn btn-success" id="addIdioma" value="Agregar Idioma"-->
-                                Si <input type="radio" name="idiom" id="idiSi" class="radioID" value="S">
-                                No <input type="radio" name="idiom" id="idiNo" class="radioID" value="N" checked>
-                            <button type="button" class="btn btn-success" id="addIdioma"><i class="fas fa-plus"></i></button>
+                            Si <input type="radio" name="idiom" id="idiSi" class="radioID" value="S">
+                            No <input type="radio" name="idiom" id="idiNo" class="radioID" value="N" checked>
+                            <button type="button" class="btn btn-success" id="addIdioma" disabled><i class="fas fa-plus"></i></button>
                         </div>
                         <div class="iteracion" data-it="0"></div>
                         <div class="col-lg-6">

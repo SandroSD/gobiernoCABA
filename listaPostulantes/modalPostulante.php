@@ -9,12 +9,16 @@
       $idPostulante = $_POST['idPostulante'];
     }
     
-    $selectPostulante = "SELECT *,ec.descripcion, pp.nombrePais, es.nombreEstado
-                         FROM postulante p
-                         INNER JOIN estadoCivil ec ON(p.idEstadoCivil = ec.idEstadoCivil)
-                         INNER JOIN pais pp ON(p.idPais = pp.idPais)
-                         INNER JOIN estado es ON (p.idEstado = es.idEstado AND p.idPais = es.idPais)
-                         WHERE idPostulante ='".$idPostulante."'";    
+    $selectPostulante = "SELECT * FROM
+                          postulante p
+                              INNER JOIN
+                          estadoCivil ec ON (p.idEstadoCivil = ec.idEstadoCivil)
+                              INNER JOIN
+                          estado es ON (p.idEstado = es.idEstado)
+                              INNER JOIN
+                          pais pp ON (es.idPais = pp.idPais)
+                          WHERE
+                          idPostulante = '".$idPostulante."'";    
     $infoPostulante = $bd->ejecutarQuery($selectPostulante);
 
     $selectIdioma = "SELECT *
